@@ -9,3 +9,8 @@ Ethnicity
 
 These will be dropped for simiplicity of dataset and help the model be more optimized.
 The dataset almost contains no outliers, so no need of quartile capping etc.
+
+the reason for removing GPA for the feature columns, is to ensure that the model does not cheat it way out.
+There is a fixed function between gpa and gradeclass already defined before hand.
+The model can be influenced by this and will ignore all other features and give output solely based on GPA.
+Which we dont want.
