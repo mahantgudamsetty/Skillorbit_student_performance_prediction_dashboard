@@ -1,0 +1,11 @@
+Upon keen observation of the heatmap of the dataset showing the correlations between all possible pairs of columns
+These cols are found to not effect GPA, as they have zero or near zero correlation to it
+
+Volunteering
+StudentID
+Age
+Gender
+Ethnicity
+
+These will be dropped for simiplicity of dataset and help the model be more optimized.
+The dataset almost contains no outliers, so no need of quartile capping etc.
