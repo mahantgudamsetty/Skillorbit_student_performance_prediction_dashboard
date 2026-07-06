@@ -1,17 +1,8 @@
 The dataset almost contains no outliers, so no need of quartile capping etc.
 
-the reason for removing GPA for the feature columns, is to ensure that the model does not cheat it way out.
+the reason for removing GPA,GradeClass for the feature columns, is to ensure that the model does not cheat it way out.
 There is a fixed function between gpa and gradeclass already defined before hand.
 The model can be influenced by this and will ignore all other features and give output solely based on GPA.
 Which we dont want.
 
-confusion matrix gives us the number of positives given to each class of elements belonging to each class 
-It can be used to see the number of false positives classified by the model.
-For a perfect model, the values are along the diagonal, so we want our values to be concentrated along the diagonal
-
-classifaction report is a report of the four metrics for all classes, the metrics are:
-    Precision
-    Recall
-    F1-score
-    Support
      

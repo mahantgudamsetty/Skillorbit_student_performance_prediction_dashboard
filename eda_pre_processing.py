@@ -39,14 +39,12 @@ print(f'Nulls before{df.isnull().sum()}')
 # pre processing
 # splitting the feature columns and the target column
 x=df.drop(['GradeClass','GPA','StudentID'],axis=1) # reason for this will be given in the report
-y=df['GradeClass'] # i will be using RandomTreeClassifer for this 
 y1=df['GPA'] # i will be using RandomTreeregressor for this
-x_train,x_test,y_train,y_test=train_test_split(x,y,test_size=0.2,random_state=42)
-x_train,x_test,y1_train,y1_test=train_test_split(x,y1,test_size=0.2,random_state=42)
+x_train,x_test,y_train,y_test=train_test_split(x,y1,test_size=0.2,random_state=42)
 # label encoding not required as all columns are numerical
-# I am not going to normailze the data for speed and the RandomTreeRegressor/Classifier is not effect by the scale of the cols as it's output is produced purely by comparision.
+# I am not going to normailze the data for speed and the RandomTreeRegressor is not effect by the scale of the cols as it's output is produced purely by comparision.
 
-processed_dataset=(x_train,x_test,y_train,y_test,y1_train,y1_test)
+processed_dataset=(x_train,x_test,y_train,y_test)
 
 with open('Skillorbit_student_performance_prediction_dashboard/model/processed_data.pkl','wb') as file:
     pickle.dump(processed_dataset,file)
