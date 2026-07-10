@@ -1,8 +1,6 @@
 from sklearn.ensemble import RandomForestRegressor
-from sklearn.ensemble import RandomForestClassifier
 from sklearn.model_selection import GridSearchCV
 from sklearn.metrics import r2_score, mean_absolute_error, mean_squared_error
-from sklearn.metrics import accuracy_score,classification_report,confusion_matrix
 import numpy as np
 import pickle
 
@@ -43,5 +41,5 @@ print("MSE for GPA:", mse)
 print("RMSE for GPA:", rmse)
 
 # for future use, we will save the models in a pickle file so that we can use them without training again.
-with open("Skillorbit_student_performance_prediction_dashboard/model/regressor.pkl", "wb") as f:
+with open("model/regressor.pkl", "wb") as f:
     pickle.dump(rfr_best, f)
