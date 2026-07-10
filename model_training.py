@@ -6,7 +6,7 @@ from sklearn.metrics import accuracy_score,classification_report,confusion_matri
 import numpy as np
 import pickle
 
-with open('Skillorbit_student_performance_prediction_dashboard/model/processed_data.pkl', 'rb') as file:
+with open('model/processed_data.pkl', 'rb') as file:
     x_train, x_test, y_train, y_test = pickle.load(file)
 parameter_grid=param_grid = {
     "n_estimators": [100, 200, 300],
